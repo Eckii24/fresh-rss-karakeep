@@ -1,0 +1,196 @@
+.karakeep-add-wrap {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-wrap {
+        background: #2d3748;
+        border: 1px solid #4a5568;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+}
+
+.karakeep-add-btn {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.karakeep-add-btn:hover {
+    background: #3367d6;
+}
+
+.karakeep-add-btn:disabled {
+    background: #9aa0a6;
+    cursor: not-allowed;
+}
+
+.karakeep-add-content {
+    display: none;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-content {
+        color: #e2e8f0;
+    }
+}
+
+.karakeep-add-content.visible {
+    display: block;
+    margin-top: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 4px;
+    border-left: 4px solid #4285f4;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-content.visible {
+        background: #1a202c;
+        border-left: 4px solid #4285f4;
+    }
+}
+
+.karakeep-add-wrap.loading .karakeep-add-btn {
+    position: relative;
+}
+
+.karakeep-add-wrap.loading .karakeep-add-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.karakeep-add-wrap.loading .karakeep-add-content {
+    display: block;
+    color: #666;
+    font-style: italic;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-wrap.loading .karakeep-add-content {
+        color: #a0aec0;
+    }
+}
+
+.karakeep-add-wrap.error .karakeep-add-content {
+    display: block;
+    color: #d32f2f;
+    background: #ffebee;
+    border-left-color: #d32f2f;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-wrap.error .karakeep-add-content {
+        color: #fed7d7;
+        background: #742a2a;
+        border-left-color: #fc8181;
+    }
+}
+
+.karakeep-add-wrap.error .karakeep-add-btn {
+    background: #d32f2f;
+}
+
+.karakeep-add-wrap.error .karakeep-add-btn:hover {
+    background: #b71c1c;
+}
+
+/* Dark mode support for error states */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-wrap.error .karakeep-add-btn {
+        background: #e53e3e;
+    }
+    
+    .karakeep-add-wrap.error .karakeep-add-btn:hover {
+        background: #c53030;
+    }
+}
+
+.karakeep-add-wrap.success .karakeep-add-content {
+    display: block;
+    color: #2e7d32;
+    background: #e8f5e8;
+    border-left-color: #4caf50;
+}
+
+/* Dark mode support for success states */
+@media (prefers-color-scheme: dark) {
+    .karakeep-add-wrap.success .karakeep-add-content {
+        color: #c6f6d5;
+        background: #276749;
+        border-left-color: #48bb78;
+    }
+}
+
+.karakeep-add-wrap.success .karakeep-add-btn {
+    background: #4caf50;
+}
+
+.karakeep-add-wrap.success .karakeep-add-btn:hover {
+    background: #388e3c;
+}
+
+/* Bookmark indicator */
+.karakeep-add-btn::before {
+    content: '🔖 ';
+    margin-right: 4px;
+}
+
+/* Content styling */
+.karakeep-add-content h1,
+.karakeep-add-content h2,
+.karakeep-add-content h3,
+.karakeep-add-content h4,
+.karakeep-add-content h5,
+.karakeep-add-content h6 {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.karakeep-add-content p {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+.karakeep-add-content ul,
+.karakeep-add-content ol {
+    margin: 0 0 8px 16px;
+    padding: 0;
+}
+
+.karakeep-add-content li {
+    margin: 0 0 4px 0;
+}
