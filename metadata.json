@@ -1,0 +1,8 @@
+{
+  "name": "Karakeep",
+  "author": "Eckii24",
+  "description": "Karakeep integration for FreshRSS - Save articles to your Karakeep bookmark manager",
+  "version": "1.0.0",
+  "entrypoint": "Karakeep",
+  "type": "user"
+}
